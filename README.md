@@ -1,2 +1,1 @@
-# JasonPhotography.github.io
-Jason Photgraphy pages repo
+Official site for Jason Photography.
