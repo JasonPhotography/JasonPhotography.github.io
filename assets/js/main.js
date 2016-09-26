@@ -18,7 +18,7 @@
 
 		var	$window = $(window),
 			$body = $('body'),
-			$sidebar = $('#sidebar');
+			$sidebar = $('#sidebar0');
 
 		// Hack: Enable IE flexbox workarounds.
 			if (skel.vars.IEVersion < 12)
@@ -65,14 +65,11 @@
 				var $sidebar_a = $sidebar.find('a');
 
 				$sidebar_a
-					.addClass('scrolly')
-					.on('click', function() {
+					.on('mouseenter', function() {
 
 						var $this = $(this);
 
 						// External link? Bail.
-							if ($this.attr('href').charAt(0) != '#')
-								return;
 
 						// Deactivate all links.
 							$sidebar_a.removeClass('active');
@@ -83,15 +80,20 @@
 								.addClass('active-locked');
 
 					})
+					.on('mouseleave', function() {
+
+						var $this = $(this);
+						
+							$this
+								.removeClass('active')
+								.removeClass('active-locked');
+
+					})
 					.each(function() {
 
 						var	$this = $(this),
 							id = $this.attr('href'),
 							$section = $(id);
-
-						// No section for this link? Bail.
-							if ($section.length < 1)
-								return;
 
 						// Scrollex.
 							$section.scrollex({
