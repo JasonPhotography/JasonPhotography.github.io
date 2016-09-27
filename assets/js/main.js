@@ -89,6 +89,7 @@
 								.removeClass('active-locked');
 
 					})
+					
 					.each(function() {
 
 					});
