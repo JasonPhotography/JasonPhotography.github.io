@@ -3276,19 +3276,6 @@
 
 			}
 
-			@media screen and (max-width: 736px) {
-
-				.wrapper.fullscreen {
-					padding: 2em 0;
-					min-height: 0;
-				}
-
-					body.is-ie .wrapper.fullscreen {
-						height: auto;
-					}
-
-			}
-
 		.wrapper.fade-up > .inner {
 			-moz-transform: translateY(0);
 			-webkit-transform: translateY(0);
@@ -3843,7 +3830,7 @@
 		@media screen and (max-width: 736px) {
 
 			#sidebar0 {
-				display: none;
+				font-size: 0.7em;
 			}
 
 		}
@@ -3854,7 +3841,8 @@
 		font-family: sans-serif, monospace;
 		background-image: url("../../images/BG_B.jpg");
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-width: 100%;
+		background-height: auto;
 	}
 
 		#intro p {
